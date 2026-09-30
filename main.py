@@ -113,6 +113,8 @@ while True:
                                         lname=data[things]["lastname"]
                                         report=input("type here: ")
                                         data[f"{fname,lname}"]["report"]=report
+with open("data.json","w") as file:
+    json.dump(data,file,indent=4)
                             else:
                                 break
                 else:
